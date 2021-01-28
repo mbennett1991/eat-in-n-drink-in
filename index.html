@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Eat in N Drink in</title>
 </head>
+
 <body>
-    <div class = "container" id = "strtPage">
-        <button id = "strtBtn">Get Started</button>
+    <div class="container hide" id="strtPage">
+        <button id="strtBtn">Get Started</button>
     </div>
-    <div class = "container" id = "userForm">
-        <form>
-            <label>
-                <input type = "text" id = "main" placeholder="Main Ingredient">
-            </label>
-            <label>
-                <input type = "checkbox" id = "veg">
-                <span>Vegan/Vegetarian</span>
-            </label>
-            <label>
-                <input type = "checkbox" id = "nutFree">
-                <span>Nut Free</span>
-            </label>
-            <label>
-                <input type="checkbox" id = "gFree">
-                <span>Gluten Free</span>
-            </label>
-            <label>
-                <input type = "text" id = "exclude" placeholder="Exclude">
-                <button id = "addExc">Add</button>
-            </label>
-            <div>
-                <button id = "srchBtn">Search</button>
-            </div>    
-        </form>
+    <div class="valign-wrapper">
+        <div class="container" id="userForm">
+            <div class="row">
+                <form>
+                    <label>
+                        <input type="text" id="main" placeholder="Main Ingredient">
+                    </label>
+                    <select multiple>
+                        <option value="" disabled selected>Dietary Restrictions</option>
+                        <option value="1" id="veg">Vegan/Vegetarian</option>
+                        <option value="2" id="nutFree">Nut Free</option>
+                        <option value="3" id="gFree">Gluten Free</option>
+                    </select>
+                    <div class=" chips chips-placeholder" id="exclude" placeholder="Exclude">
+                    </div>
+                    <div>
+                        <button class="right" id="srchBtn"><i class = "material-icons">search</i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="container" id = "ingredientList">
-        <button id = "pair">Pair with a Drink</button>
+    <div class="container hide" id="ingredientList">
+        <button id="pair">Pair with a Drink</button>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src = "script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
