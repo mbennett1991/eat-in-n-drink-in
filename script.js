@@ -29,3 +29,19 @@ $(document).ready(function(){
     $('select').formSelect('methodName');
     $('select').formSelect('methodName', paramName);
 */
+
+
+//PLUG IN FOR MODAL 
+$(document).ready(function(){
+    $('.modal').modal();
+  });
+            //METHOD
+//var instance = M.Modal.getInstance(elem);
+
+/* jQuery Method Calls
+    You can still use the old jQuery plugin method calls.
+    But you won't be able to access instance properties.
+          
+    $('.modal').modal('methodName');
+    $('.modal').modal('methodName', paramName);
+*/
