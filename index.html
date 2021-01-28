@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Eat in N Drink in</title>
+</head>
+<body>
+    <div class = "container" id = "strtPage">
+        <button id = "strtBtn">Get Started</button>
+    </div>
+    <div class = "container" id = "userForm">
+        <form>
+            <label>
+                <input type = "text" id = "main" placeholder="Main Ingredient">
+            </label>
+            <label>
+                <input type = "checkbox" id = "veg">
+                <span>Vegan/Vegetarian</span>
+            </label>
+            <label>
+                <input type = "checkbox" id = "nutFree">
+                <span>Nut Free</span>
+            </label>
+            <label>
+                <input type="checkbox" id = "gFree">
+                <span>Gluten Free</span>
+            </label>
+            <label>
+                <input type = "text" id = "exclude" placeholder="Exclude">
+                <button id = "addExc">Add</button>
+            </label>
+            <div>
+                <button id = "srchBtn">Search</button>
+            </div>    
+        </form>
+    </div>
+    <div class="container" id = "recipeList">
+
+    </div>
+    <div class="container" id = "recipeDisplay">
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src = "script.js"></script>
+</body>
+</html>
