@@ -2,7 +2,7 @@
 ### Description
 WE wanted to build an application where a user can pair foods with drinks. In this application we have used two server-side APIs, client-side storage for persistent data, Materialize as a CSS framework, search inputs, check boxes, lists, and various buttons for pairing.
 
-Given more time we would allow the user to create an account and save their searches to their personal account page. We could add nutritional information to show how healthy a meal is with a colour scale.
+Given more time we would allow the user to create an account and save their searches to their personal account page. We could also add nutritional information to show how healthy a meal is with a colour scale. Lastly, we would allow the user to pair more than just beer with their food choices.
 
 ---
 
@@ -32,10 +32,10 @@ Here is our application in action!
 ### Links
 Below is a link to our gitHub pages to see more of our work!
 
-<a href = "https://AlishaSaleh.github.io/">Alisha Saleh</a><br>
-<a href = "https://ClaireMDavies.github.io/">Claire Davies</a><br>
-<a href = "https://lukedesmond.github.io/">Luke Desmond</a><br>
-<a href = "https://mbennett1991.github.io/">Michelle Bennett</a>
+<a href = "https://github.com/AlishaSaleh/">Alisha Saleh</a><br>
+<a href = "https://github.com/ClaireMDavies/">Claire Davies</a><br>
+<a href = "https://github.com/lukedesmond/">Luke Desmond</a><br>
+<a href = "https://github.com/mbennett1991/">Michelle Bennett</a>
  
 ---
 <a name = "Credits"></a>  

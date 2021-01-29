@@ -33,8 +33,11 @@ $(document).ready(function(){
 
 //PLUG IN FOR MODAL 
 $(document).ready(function(){
-    $('.modal').modal();
+    $('.modal').modal();        
   });
+$("#over18").click(function(){
+   $("#strtPage").removeClass("hide");
+});
             //METHOD
 //var instance = M.Modal.getInstance(elem);
 

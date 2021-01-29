@@ -10,3 +10,8 @@ body{
     padding: 10px;
     border-radius: 10px;
 }
+#ingredientList{
+    border-radius: 10px;
+}
+#userResults{
+}

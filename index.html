@@ -14,7 +14,7 @@
     <div class="container hide" id="strtPage">
         <button id="strtBtn">Get Started</button>
     </div>
-    <div class="valign-wrapper">
+    <div class="valign-wrapper hide">
         <div class="container grey lighten-5" id="userForm">
             <div class="row">
                 <form>
@@ -36,18 +36,18 @@
             </div>
         </div>
     </div>
-    
-    <div class="container hide" id="ingredientList">
+    <div class="container grey lighten-5" id="ingredientList">
         <div class="row">
             <div class="col m2 s12 right" id="drinkSection">
-                <a href="#ageConfirm" class="btn modal-trigger" id="pair">Pair with a Drink</a>
+                <a href="#ageConfirm" class="btn large modal-trigger" id="pair">Pair</a>
                 <div class="modal modal-fixed-footer" id="ageConfirm">
                     <div class="modal-content">
                         <h5>Please confirm if you are over the age of 18.</h5>
                     </div>
                     <div class="modal-footer">
-                        <a href="#" class="modal-close btn green darken-3" id="over18">Confirm</a>
                         <a href="#" class="modal-close btn red darken-4" id="under18">Cancel</a>
+                        <a href="#" onlick="MyFunction();return false" class="modal-close btn green darken-3"
+                            id="over18">Confirm</a>
                     </div>
                 </div>
             </div>
