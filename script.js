@@ -36,7 +36,8 @@ $(document).ready(function(){
     $('.modal').modal();        
   });
 $("#over18").click(function(){
-   $("#strtPage").removeClass("hide");
+    MyFunction();
+    return false;
 });
             //METHOD
 //var instance = M.Modal.getInstance(elem);
