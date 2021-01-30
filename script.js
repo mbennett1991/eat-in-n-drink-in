@@ -9,6 +9,7 @@ $("#srchBtn").on("click", function(){
     $("#strtPage").addClass("hide");
     $("#userForm").addClass("hide");
     $("#ingredientList").removeClass("hide");
+    $("#drinkBtn").removeClass("hide");
 });
 
 // PLUG IN with jQuery
