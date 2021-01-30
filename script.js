@@ -1,14 +1,17 @@
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.sidenav');
-  var instances = M.Sidenav.init(elems, options);
+//START BUTTON TO NEXT PAGE
+function startPg(){
+    $("#strtPage").addClass("hide");
+    $("#userForm").removeClass("hide");
+};
+
+//
+$("#srchBtn").on("click", function(){
+    $("#strtPage").addClass("hide");
+    $("#userForm").addClass("hide");
+    $("#ingredientList").removeClass("hide");
 });
 
-// Initialize collapsible (uncomment the lines below if you use the dropdown variation)
-// var collapsibleElem = document.querySelector('.collapsible');
-// var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
-
-// Or with jQuery
-
+// PLUG IN with jQuery
 $(document).ready(function(){
   $('.sidenav').sidenav();
 });
@@ -18,9 +21,6 @@ $(document).ready(function(){
     $('.carousel').carousel();
 });
 
-$('.carousel.carousel-slider').carousel({
-    fullWidth: true
-  });
 // PLUG IN FOR CHIPS CLASS 
 $('.chips-placeholder').chips({
     placeholder: 'Exclude',
