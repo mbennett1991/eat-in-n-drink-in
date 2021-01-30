@@ -11,41 +11,46 @@
 </head>
 
 <body>
-    <nav class="hide"></nav>
-    <ul id="slide-out" class="sidenav">
-        <li>
-            <div class="user-view">
-                <div class="background">
-                    <img src="">
-                </div>
-                <a href="#user"><img class="container"
-                        src="https://i.gyazo.com/0976ae9777923afd1ad1e58173f3a434.png"></a>
-            </div>
-        </li>
-        <li>
-            <a href="#!"><i class="material-icons">favorite</i>Saved Recipies</a>
-        </li>
-        <li>>
-            <div class = "hide" id="drinkBtn">
-                <a href="#ageConfirm" class="btn large modal-trigger orange accent-4 " id="pair"> Add a drink
-                    pairing</a>
-                <div class="modal modal-fixed-footer" id="ageConfirm">
-                    <div class="modal-content">
-                        <p class="content">Please confirm if you are over the age of 18.</p>
+    <div id="navslide">
+        <nav class="hide"></nav>
+        <ul id="slide-out" class="sidenav">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img src="">
                     </div>
-                    <div class="modal-footer">
-                        <a href="#" class="modal-close btn red darken-4" id="under18">Cancel</a>
-                        <a href="#" onlick="MyFunction();return false" class="modal-close btn green darken-3"
-                            id="over18">Confirm</a>
+                    <a href="#user"><img class="container"
+                            src="https://i.gyazo.com/0976ae9777923afd1ad1e58173f3a434.png"></a>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons">favorite</i>
+                    <span id="header1">Saved Favorites</span>
+            </li>
+            <li>>
+                <div class="hide" id="drinkBtn">
+                    <a href="#ageConfirm" class="btn large modal-trigger orange accent-4 " id="pair"> Add a drink
+                        pairing</a>
+                    <div class="modal modal-fixed-footer" id="ageConfirm">
+                        <div class="modal-content">
+                            <p class="content">Please confirm if you are over the age of 18.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="modal-close btn red darken-4" id="under18">Cancel</a>
+                            <a href="#" onclick="MyFunction();return false" class="modal-close btn green darken-3"
+                                id="over18">Confirm</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </li>
-        <li>
-            <br>
-        </li>
-    </ul>
-    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu orange</i></a>
+            </li>
+            <li>
+                <div id="showDrinks">
+                </div>
+            </li>
+        </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu orange</i></a>
+    </div>
 
     <div class="container" id="strtPage">
         <div class="carousel">
