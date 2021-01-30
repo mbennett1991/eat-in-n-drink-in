@@ -5,22 +5,39 @@ var health1 = "&health=vegan";
 var health2 = "&health=peanut-free&health=tree-nut-free";
 var searchInput = $("#main");
 
+ // ONCLICK for start page
+ $("#strtBtn").on("click", function(event){
+    event.preventDefault();
+    startPg();
+})
 //START BUTTON TO NEXT PAGE
 function startPg() {
     $("#strtPage").addClass("hide");
     $("#userForm").removeClass("hide");
-    return false;
+    // return false;
 };
+// ONCLICK for search
+$("#srchBtn").on("click", function (event) {
+    event.preventDefault();
+    $("#strtPage").addClass("hide");
+    $("#userForm").addClass("hide");
+    $("#ingredientList").removeClass("hide");
+    $("#drinkBtn").removeClass("hide");
+    callAPI();
+});
 
-function userInput() {
-    // Search input into value to go through API
+
+// function userInput() {
+//     // Search input into value to go through API
+//     search = searchInput.val().trim();
+//     console.log(search);
+//     // Call AJAX request
+//     callAPIs();
+
+// }
+
+function callAPI() {
     search = searchInput.val().trim();
-    console.log(search);
-    // Call AJAX request
-    callAPIs(search);
-}
-
-function callAPIs() {
     // $("#ingredientList").show();
     // var favArr = [];
     var apiID = "271242ec";

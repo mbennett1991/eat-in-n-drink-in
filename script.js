@@ -1,17 +1,8 @@
 $(document).ready(function () {
 
-$("#srchBtn").on("click", function () {
-    $("#strtPage").addClass("hide");
-    $("#userForm").addClass("hide");
-    $("#ingredientList").removeClass("hide");
-    $("#drinkBtn").removeClass("hide");
-    userInput();
-});
 
- // ONCLICK for start page
-$("#strtBtn").on("click", function(){
-    startPg();
-})
+
+
 // PLUG IN with jQuery
 
     $('.sidenav').sidenav();
