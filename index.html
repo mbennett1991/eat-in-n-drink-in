@@ -28,9 +28,9 @@
                     <i class="material-icons">favorite</i>
                     <span id="header1">Saved Favorites</span>
             </li>
-            <li>>
+            <li>
                 <div class="hide" id="drinkBtn">
-                    <a href="#ageConfirm" class="btn large modal-trigger orange accent-4 " id="pair"> Add a drink
+                    <a href="#ageConfirm" class="btn large modal-trigger orange accent-4" id="pair"> Add a drink
                         pairing</a>
                     <div class="modal modal-fixed-footer" id="ageConfirm">
                         <div class="modal-content">
@@ -38,8 +38,9 @@
                         </div>
                         <div class="modal-footer">
                             <a href="#" class="modal-close btn red darken-4" id="under18">Cancel</a>
-                            <a href="#" onclick="MyFunction();return false" class="modal-close btn green darken-3"
+                            <a href="#" class="modal-close btn green darken-3"
                                 id="over18">Confirm</a>
+                            <button class="modal-close btn green darken-3">test</button>
                         </div>
                     </div>
                 </div>
@@ -69,13 +70,13 @@
 
         <div class="center">
             <div class="col s4">
-                <a class="btn-large orange accent-4" id="#strtBtn" onclick="startPg();return false">Get Started</a><span
-                    class="flow-text"></span>
+                <a class="btn-large orange accent-4" id="strtBtn">Get Started</a>
+                <span class="flow-text"></span>
             </div>
         </div>
     </div>
 
-    <div class="valign-wrapper hide" id="userForm">
+    <div class="valign-wrapper" id="userForm">
         <div class="container grey lighten-5">
             <div class="row">
                 <form>
@@ -91,7 +92,7 @@
                     <div class=" chips chips-placeholder" id="exclude" placeholder="Exclude">
                     </div>
                     <div>
-                        <button class="right" id="srchBtn"><i class="material-icons">search</i></button>
+                        <a href="#" class="btn large right orange accent-4" id="srchBtn"><i class="material-icons">search</i></a>
                     </div>
                 </form>
             </div>

@@ -13,9 +13,8 @@ $("#srchBtn").on("click", function(){
 });
 
 // PLUG IN with jQuery
-$(document).ready(function(){
-  $('.sidenav').sidenav();
-});
+
+$('.sidenav').sidenav();
 
 //PLUG IN FOR CAROUSEL 
 $(document).ready(function(){
