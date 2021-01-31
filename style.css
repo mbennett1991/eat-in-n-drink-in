@@ -7,9 +7,16 @@
     position: absolute;
 }
 #userForm{
+    background-color: #798789;
     padding: 10px;
     border-radius: 10px;
+    color: #F19820;
+    box-shadow: 0px 0px 100px 10px #F19820;
 }
+[type="checkbox"].filled-in:checked + span:not(.lever):after{
+    border: 2px solid #F19820 !important;
+    background-color: #F19820 !important;
+}    
 #ingredientList{
     border-radius: 10px;
 }

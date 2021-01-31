@@ -10,7 +10,7 @@
     <title>Eat in N Drink in</title>
 </head>
 
-<body>    
+<body>
     <div id="navslide">
         <nav class="hide"></nav>
         <ul id="slide-out" class="sidenav">
@@ -38,8 +38,7 @@
                         </div>
                         <div class="modal-footer">
                             <a href="#" class="modal-close btn red darken-4" id="under18">Cancel</a>
-                            <a href="#" class="modal-close btn green darken-3"
-                                id="over18">Confirm</a>
+                            <a href="#" class="modal-close btn green darken-3" id="over18">Confirm</a>
                             <button class="modal-close btn green darken-3">test</button>
                         </div>
                     </div>
@@ -86,24 +85,32 @@
         </div>
     </div>
 
-    <div class="valign-wrapper" id="userForm">
-        <div class="container grey lighten-5">
+    <div class="valign-wrapper">
+        <div class="container" id="userForm">
             <div class="row">
-                <form>
+                <form action ="#">
+                    <input type="text" id="main" placeholder="Main Ingredient">
+                    <br>
+                    <br>
                     <label>
-                        <input type="text" id="main" placeholder="Main Ingredient">
+                        <input type="checkbox" class="filled-in" id="vegan" class="red">
+                        <span>Vegan</span>
                     </label>
-                    <select multiple>
-                        <option value="" disabled selected>Dietary Restrictions</option>
-                        <option value="1" id="veg">Vegan/Vegetarian</option>
-                        <option value="2" id="nutFree">Nut Free</option>
-                        <option value="3" id="gFree">Gluten Free</option>
-                    </select>
-                    <div class=" chips chips-placeholder" id="exclude" placeholder="Exclude">
-                    </div>
-                    <div>
-                        <a href="#" class="btn large right orange accent-4" id="srchBtn"><i class="material-icons">search</i></a>
-                    </div>
+                    <br>
+                    <label>
+                        <input type="checkbox" class="filled-in" id="vegetarian">
+                        <span>Vegetarian</span>
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" class="filled-in" id="nutFree">
+                        <span>Nut Free</span>
+                    </label>
+                    <br>
+                    <br>
+                    <input type="text" id="exclude" placeholder="Exclude">
+                    <a href="#" class="btn large right orange accent-4" id="srchBtn"><i
+                        class="icon material-icons">search</i></a>
                 </form>
             </div>
         </div>
