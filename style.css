@@ -15,3 +15,11 @@
 }
 #userResults{
 }
+
+img.container{
+    width: 100%;
+}
+i.material-icons{
+   color:#ff6d00; 
+   font-size:xx-large;
+}
