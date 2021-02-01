@@ -133,3 +133,24 @@ function drinkWithThat(beers){
     })
 }
 
+//display drinks pairing
+function processBeerList(beers){
+    var beerList = $("#drinks-list");
+    beerList.empty();
+
+    $.each(beers, function(index, beer) {
+
+        if (index <= 4){
+
+        beerList.append('<li>' + beer.name + "<br>" + '<img class="beer-image" src="' + beer.image_url + '"/></li>');
+            $(".beer-image").height("10%")
+            $(".beer-image").width("10%")
+            console.log(beer.name);
+        }
+        else {
+
+        }
+
+            
+    });
+}
