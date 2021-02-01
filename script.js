@@ -1,8 +1,4 @@
 $(document).ready(function () {
-
-
-
-
 // PLUG IN with jQuery
 
     $('.sidenav').sidenav();
@@ -11,6 +7,7 @@ $(document).ready(function () {
 
     $('.carousel').carousel();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 // PLUG IN FOR CHIPS CLASS 
@@ -47,6 +44,11 @@ $(".collapsible").collapsible();
 
 
 >>>>>>> d0a01df49048dae7deba86584d67e9755962c1d3
+=======
+  // Collapsible plugin 
+$(".collapsible").collapsible();
+
+>>>>>>> bb3efad92c8a34976af83ab058a22eba867f9704
 //PLUG IN FOR MODAL 
     $('.modal').modal();
 
@@ -54,6 +56,7 @@ $("#over18").click(function () {
     drinkWithThat();
     return false;
 });
+<<<<<<< HEAD
 //METHOD
 //var instance = M.Modal.getInstance(elem);
 
@@ -66,3 +69,19 @@ $("#over18").click(function () {
 */
 
 })
+=======
+=======
+//START BUTTON TO NEXT PAGE
+function startPg(){
+    $("#strtPage").addClass("hide");
+    $("#userForm").removeClass("hide");
+};
+
+//
+$("#srchBtn").on("click", function(){
+    $("#strtPage").addClass("hide");
+    $("#userForm").addClass("hide");
+    $("#ingredientList").removeClass("hide");
+    $("#drinkBtn").removeClass("hide");
+});
+>>>>>>> bb3efad92c8a34976af83ab058a22eba867f9704

@@ -18,6 +18,13 @@ img.container{
     box-shadow: 0px 0px 100px 10px #F19820;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+[type="checkbox"].filled-in:checked + span:not(.lever):after{
+    border: 2px solid #F19820 !important;
+    background-color: #F19820 !important;
+}    
+>>>>>>> bb3efad92c8a34976af83ab058a22eba867f9704
 .input-field input[type=text]:focus textarea.materialize-textarea {
     border-bottom: 1px solid #000 !important;
     box-shadow: 0 1px 0 0 #000;
@@ -29,26 +36,29 @@ img.container{
 textarea.materialize-textarea {
     border-bottom: 1px solid orange !important;
   }
+<<<<<<< HEAD
 =======
 [type="checkbox"].filled-in:checked + span:not(.lever):after{
     border: 2px solid #F19820 !important;
     background-color: #F19820 !important;
 }    
 >>>>>>> d0a01df49048dae7deba86584d67e9755962c1d3
+=======
+>>>>>>> bb3efad92c8a34976af83ab058a22eba867f9704
 #ingredientList{
     border-radius: 10px;
 }
 #userResults{
-}
-[type="checkbox"].filled-in:checked + span:not(.lever):after{
-    border: 2px solid #F19820 !important;
-    background-color: #F19820 !important;
-}    
+}  
 #ingredientList{
     border-radius: 10px;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
 }
 
 >>>>>>> d0a01df49048dae7deba86584d67e9755962c1d3
+=======
+}
+>>>>>>> bb3efad92c8a34976af83ab058a22eba867f9704
