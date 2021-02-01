@@ -13,95 +13,110 @@
 <body>
     <nav class="hide"></nav>
     <ul id="slide-out" class="sidenav">
+        <br>
+        <br>
+        <br>
         <li>
-            <div class="user-view">
-                <div class="background">
-                    <img src="">
-                </div>
-                <a href="#user"><img class="container"
-                        src="https://i.gyazo.com/0976ae9777923afd1ad1e58173f3a434.png"></a>
+            <img class="container" src="https://i.gyazo.com/0976ae9777923afd1ad1e58173f3a434.png">
+        </li>
+        <br>
+        <br>
+        <br>
+        <li>
+            <div class="collapsible-header">
+                <i class="material-icons">favorite</i>
+                <span id="header1">Saved Favorites</span>
+            </div>
+            <div class="collapsible-body">
             </div>
         </li>
+        <br>
+        <br>
+        <br>
         <li>
-            <a href="#!"><i class="material-icons">favorite</i>Saved Recipies</a>
-        </li>
-        <li>>
-            <div class = "hide" id="drinkBtn">
-                <a href="#ageConfirm" class="btn large modal-trigger orange accent-4 " id="pair"> Add a drink
+            <div class="hide center" id="drinkBtn">
+                <a href="#ageConfirm" class="btn large modal-trigger orange accent-4" id="pair">Add a drink
                     pairing</a>
-                <div class="modal modal-fixed-footer" id="ageConfirm">
-                    <div class="modal-content">
-                        <p class="content">Please confirm if you are over the age of 18.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#" class="modal-close btn red darken-4" id="under18">Cancel</a>
-                        <a href="#" onlick="MyFunction();return false" class="modal-close btn green darken-3"
-                            id="over18">Confirm</a>
-                    </div>
-                </div>
             </div>
-        </li>
-        <li>
             <br>
         </li>
+        <li>
+            <ul id="drinks-list">
+            </ul>
+        </li>
+        <br>
+        <br>
     </ul>
     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu orange</i></a>
 
-    <div class="container" id="strtPage">
-        <div class="carousel">
-            <a class="carousel-item" href="#one!"><img
-                    src="https://i.gyazo.com/0976ae9777923afd1ad1e58173f3a434.png"></a>
-            <a class="carousel-item" href="#two!"><img
-                    src="https://www.edamam.com/web-img/a73/a73159b4affa3460299feea42c4430be.jpg"></a>
-            <a class="carousel-item" href="#three!"><img
-                    src="https://www.edamam.com/web-img/2d1/2d1770d49a37ccc618c0780c2abcf2b9.jpg"></a>
-            <a class="carousel-item" href="#four!"><img
-                    src="https://www.edamam.com/web-img/480/48035cdb9995944cd654d5e118f1e399.jpg"></a>
-        </div>
-
-        <br>
-        <br>
-
-        <div class="center">
-            <div class="col s4">
-                <a class="btn-large orange accent-4" id="strtBtn">Get Started</a><span
-                    class="flow-text"></span>
-            </div>
+    <div class="carousel">
+        <a class="carousel-item" href="logo"><img src="https://i.gyazo.com/0976ae9777923afd1ad1e58173f3a434.png"></a>
+        <a class="carousel-item"
+            href="http://www.edamam.com/recipe/the-best-vegan-breakfast-sandwich-9559557a0cc426dfd7d7aca79a0bce98/vegan"><img
+                src="https://www.edamam.com/web-img/a73/a73159b4affa3460299feea42c4430be.jpg"></a>
+        <a class="carousel-item"
+            href="https://www.edamam.com/recipe/kimchi-pasta-b3ce18c4a415f62086a858c54f2c3f19/pasta"><img
+                src="https://www.edamam.com/web-img/2d1/2d1770d49a37ccc618c0780c2abcf2b9.jpg"></a>
+        <a class="carousel-item"
+            href="http://www.edamam.com/recipe/african-ground-nut-stew-with-sour-cream-chive-topping-1e92418f617c806ffe8e70e2d571da1e/tree+nut+free"><img
+                src="https://www.edamam.com/web-img/480/48035cdb9995944cd654d5e118f1e399.jpg"></a>
+        <a class="carousel-item"
+            href="http://www.edamam.com/recipe/chicken-liver-p%C3%A2t%C3%A9-9ca0499f2ac7f1e4cae63bdf4671c1b3/chicken"><img
+                src="https://www.edamam.com/web-img/480/480000e79dbdd4648c4acd65630ff654.jpg"></a>
+    </div>
+    <hr>
+    <br>
+    <div class="center">
+        <div class="col s4">
+            <a class="btn-large orange accent-4" id="strtBtn">Get Started</a>
+            <span class="flow-text"></span>
         </div>
     </div>
+    </div>
 
-    <div class="valign-wrapper hide" id="userForm">
-        <div class="container">
+    <div class="valign-wrapper hide">
+        <div class="container" id="userForm">
             <div class="row">
-                <form action ="#">
+                <form action="#">
                     <input type="text" id="main" placeholder="Main Ingredient">
                     <br>
                     <br>
                     <label>
-                        <input type="checkbox" id="vegan">
+                        <input type="checkbox" class="filled-in" id="vegan" class="red">
                         <span>Vegan</span>
                     </label>
                     <br>
                     <label>
-                        <input type="checkbox" id="vegetarian">
+                        <input type="checkbox" class="filled-in" id="vegetarian">
                         <span>Vegetarian</span>
                     </label>
                     <br>
                     <label>
-                        <input type="checkbox" id="nutFree">
+                        <input type="checkbox" class="filled-in" id="nutFree">
                         <span>Nut Free</span>
                     </label>
                     <br>
                     <br>
                     <input type="text" id="exclude" placeholder="Exclude">
-                    <a href="#" class="btn large right orange accent-4" id="srchBtn"><i
-                        class="icon material-icons">search</i></a>
+                    <a href="#" class="btn large right orange accent-4" id="srchBtn"><i HEAD
+                            class="icon material-icons">search</i></a>
                 </form>
             </div>
         </div>
     </div>
     <div class="container grey lighten-5 hide" id="ingredientList">
         <div class="row">
+            <div class="modal modal-fixed-footer" id="ageConfirm">
+                <div class="modal-content">
+                    <h3 class="content-center">Please confirm if you are over the age of 18.
+                    </h3>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="modal-close btn red darken-4" id="under18">Cancel</a>
+                    <a href="#" onlick="MyFunction();return false" class="modal-close btn green darken-3"
+                        id="over18">Confirm</a>
+                </div>
+            </div>
             <div class="recipeContainer">
                 <ul class="collapsible">
                     <li>
