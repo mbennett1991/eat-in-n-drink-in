@@ -71,23 +71,31 @@
     </div>
 
     <div class="valign-wrapper hide" id="userForm">
-        <div class="container grey lighten-5">
+        <div class="container">
             <div class="row">
-                <form>
+                <form action ="#">
+                    <input type="text" id="main" placeholder="Main Ingredient">
+                    <br>
+                    <br>
                     <label>
-                        <input type="text" id="main" placeholder="Main Ingredient">
+                        <input type="checkbox" id="vegan">
+                        <span>Vegan</span>
                     </label>
-                    <select multiple>
-                        <option value="" disabled selected>Dietary Restrictions</option>
-                        <option value="1" id="veg">Vegan/Vegetarian</option>
-                        <option value="2" id="nutFree">Nut Free</option>
-                        <option value="3" id="gFree">Gluten Free</option>
-                    </select>
-                    <div class=" chips chips-placeholder" id="exclude" placeholder="Exclude">
-                    </div>
-                    <div>
-                        <button class="right" id="srchBtn"><i class="material-icons">search</i></button>
-                    </div>
+                    <br>
+                    <label>
+                        <input type="checkbox" id="vegetarian">
+                        <span>Vegetarian</span>
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" id="nutFree">
+                        <span>Nut Free</span>
+                    </label>
+                    <br>
+                    <br>
+                    <input type="text" id="exclude" placeholder="Exclude">
+                    <a href="#" class="btn large right orange accent-4" id="srchBtn"><i
+                        class="icon material-icons">search</i></a>
                 </form>
             </div>
         </div>
