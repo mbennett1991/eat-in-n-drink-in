@@ -4,8 +4,9 @@ img.container{
 .sidenav-trigger .material-icons{
    color:#F19820; 
    font-size:xx-large;
-   position: sticky;
-   top: 0;
+   position: fixed;
+   top: 2px;
+   z-index:1;
 }
 .valign-wrapper{
     width: 100%;
