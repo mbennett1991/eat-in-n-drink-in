@@ -21,16 +21,22 @@ img.container{
     border: 2px solid #F19820 !important;
     background-color: #F19820 !important;
 }    
+.input-field input[type=text]:focus textarea.materialize-textarea {
+    border-bottom: 1px solid #000 !important;
+    box-shadow: 0 1px 0 0 #000;
+  }
+.input-field input[type=text].valid textarea.materialize-textarea{
+    border-bottom: 1px solid #000 !important;
+    box-shadow: 0 1px 0 0 #000;
+}
+textarea.materialize-textarea {
+    border-bottom: 1px solid orange !important;
+  }
 #ingredientList{
     border-radius: 10px;
 }
 #userResults{
-}
-[type="checkbox"].filled-in:checked + span:not(.lever):after{
-    border: 2px solid #F19820 !important;
-    background-color: #F19820 !important;
-}    
+}  
 #ingredientList{
     border-radius: 10px;
 }
-
