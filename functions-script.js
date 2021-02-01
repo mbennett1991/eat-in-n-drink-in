@@ -23,13 +23,19 @@
 
 // GLOBAL VARIABLES
 var search = "";
-var excluded = "gluten";
-var health1 = "&health=vegan";
-var health2 = "&health=peanut-free&health=tree-nut-free";
+var excluded = "";
+var healthVegan = "";
+var healthVeggie = ""
+var nutFree = "";
 var searchInput = $("#main");
+var checkVegan = $("#vegan");
+var checkVeggie = $("#vegetarian")
+var checkNut = $("#nutFree");
+var checkExcl = $("#exclude");
+// var favArr = [];
 
- // ONCLICK for start page
- $("#strtBtn").on("click", function(event){
+// ONCLICK for start page
+$("#strtBtn").on("click", function (event) {
     event.preventDefault();
     startPg();
 })
@@ -39,6 +45,7 @@ function startPg() {
     $("#userForm").removeClass("hide");
     // return false;
 };
+
 // ONCLICK for search
 $("#srchBtn").on("click", function (event) {
     event.preventDefault();
@@ -49,51 +56,44 @@ $("#srchBtn").on("click", function (event) {
     callAPI();
 });
 
-
-// function userInput() {
-//     // Search input into value to go through API
-//     search = searchInput.val().trim();
-//     console.log(search);
-//     // Call AJAX request
-//     callAPIs();
-
-// }
-
 function callAPI() {
+    // getting values from the search input
     search = searchInput.val().trim();
-    // $("#ingredientList").show();
-    // var favArr = [];
+    excluded = checkExcl.val().trim();
+    // conditional statements to check for 'checked' boxes
+    if (checkVegan.is(":checked")) {
+        healthVegan = "&health=vegan"
+    } 
+    if (checkVeggie.is(":checked")) {
+        healthVeggie = "&health=vegetarian"
+    }
+    if (checkNut.is(":checked")) {
+        nutFree = "&health=peanut-free&health=tree-nut-free"
+    }
+
     var apiID = "271242ec";
     var apiKEY = "f01212876eaf371a9693f1c0ee6b6dc0";
-
-    var queryURL = "https://api.edamam.com/search?app_id=" + apiID + "&app_key=" + apiKEY + "&q=" + search + health1 + health2 + "&excluded=" + excluded;
+    var queryURL = "https://api.edamam.com/search?app_id=" + apiID + "&app_key=" + apiKEY + "&q=" + search + healthVegan + healthVeggie + nutFree + "&excluded=" + excluded;
 
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function (response) {
         console.log(response);
-        console.log(response.hits[0].recipe.ingredientLines);
-
-
-        // var recipeList = $(".collapsible");
+        console.log(queryURL);
+        // local variables
         var listNum = 0;
-        // var recipeObj = {};
         var headers = response.hits;
+        // for loop to create content into the html containers
         for (var i = 0; i < headers.length; i++) {
             $("#header" + listNum).text(headers[i].recipe.label);
             $("#recipe" + listNum).text(headers[i].recipe.ingredientLines);
             $("#image" + listNum).attr("src", headers[i].recipe.image);
             $("#link" + listNum).attr("href", headers[i].recipe.url);
             listNum++;
-            console.log(headers[i].recipe.label)
+            // console.log(headers[i].recipe.label)
         }
-        // var storeHeader = headers[i].recipe.label;
-
-        
-
-
-
+        // onclick to change the 'favorite' icon
         $(".favourite").on("click", function (event) {
             event.preventDefault();
             $(this).text("favorite");
