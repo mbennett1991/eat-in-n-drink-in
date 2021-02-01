@@ -1,5 +1,9 @@
-.body{
-    background-color: #798789
+img.container{
+    width: 100%;
+}
+.sidenav-trigger .material-icons{
+   color:#F19820; 
+   font-size:xx-large;
 }
 .valign-wrapper{
     width: 100%;
@@ -22,11 +26,11 @@
 }
 #userResults{
 }
+[type="checkbox"].filled-in:checked + span:not(.lever):after{
+    border: 2px solid #F19820 !important;
+    background-color: #F19820 !important;
+}    
+#ingredientList{
+    border-radius: 10px;
+}
 
-img.container{
-    width: 100%;
-}
-i.material-icons{
-   color:#ff6d00; 
-   font-size:xx-large;
-}
