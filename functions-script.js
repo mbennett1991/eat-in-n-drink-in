@@ -1,3 +1,26 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // GLOBAL VARIABLES
 var search = "";
 var excluded = "gluten";
@@ -82,3 +105,31 @@ function callAPI() {
 
 }
 // localStorage.setItem("favArr", JSON.stringify(favArr));
+
+//ajax call for drinks pairing
+function findDrinks(search)
+{   
+    search = searchInput.val().trim();
+    var baseURL = "https://api.punkapi.com/v2/beers";
+
+    var drinksURL = `${baseURL}?food=${search}`
+
+    $.ajax({
+        url: drinksURL,
+        method: "GET"
+    }).then(function(response) {
+        var beers = response;
+        console.log(beers);
+        processBeerList(beers);
+    });
+}
+
+
+//checking age is over 18
+function drinkWithThat(beers){
+    $("#over18").click(function(){
+        findDrinks(search);
+    
+    })
+}
+

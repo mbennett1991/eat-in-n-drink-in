@@ -48,7 +48,7 @@ $(".collapsible").collapsible();
     $('.modal').modal();
 
 $("#over18").click(function () {
-    MyFunction();
+    drinkWithThat();
     return false;
 });
 //METHOD
