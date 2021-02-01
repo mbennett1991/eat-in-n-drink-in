@@ -25,9 +25,10 @@
         <li>
             <div class="collapsible-header">
                 <i class="material-icons">favorite</i>
-                <span id="header1">Saved Favorites</span>
+                <span id="saved-favorites">Saved Favorites</span>
             </div>
             <div class="collapsible-body">
+                <span id="saved-recipes"></span>
             </div>
         </li>
         <br>
@@ -41,7 +42,7 @@
             <br>
         </li>
         <li>
-            <ul id="drinks-list">
+            <ul class="center" id="drinks-list">
             </ul>
         </li>
         <br>
@@ -70,6 +71,13 @@
         <hr>
         <br>
         <div class="center">
+            <p>
+                Welcome!
+            </p>
+            <p> 
+                This app allows you to find recipes based on your personal prefrefences and dietary restrictions. You can even pair those recipes with a beer that compliments your meal choice! Press the button below to try it out for yourself! 
+            </p> 
+            <br>
             <div class="col s4">
                 <a class="btn-large orange accent-4" id="strtBtn">Get Started</a>
                 <span class="flow-text"></span>
@@ -107,18 +115,22 @@
             </div>
         </div>
     </div>
-    <div class="container grey lighten-5 hide" id="ingredientList">
-        <div class="row">
+    <div class="container hide" id="ingredientList">
+            
             <div class="modal modal-fixed-footer" id="ageConfirm">
                 <div class="modal-content">
                     <h3 class="content-center">Please confirm if you are over the age of 18.</h3>
                 </div>
                 <div class="modal-footer">
                     <a href="#" class="modal-close btn red darken-4" id="under18">Cancel</a>
-                    <a href="#" onlick="MyFunction();return false" class="modal-close btn green darken-3"
+                    <a href="#" class="modal-close btn green darken-3"
                         id="over18">Confirm</a>
                 </div>
             </div>
+
+        <p class="center">
+            Open the side navigation to pair with a drink!
+        </p> 
             <div class="recipeContainer">
                 <ul class="collapsible">
                     <li>

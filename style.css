@@ -24,35 +24,11 @@ img.container{
     border: 2px solid #F19820 !important;
     background-color: #F19820 !important;
 }    
-.input-field input[type=text]:focus textarea.materialize-textarea {
-    border-bottom: 1px solid #000 !important;
-    box-shadow: 0 1px 0 0 #000;
-  }
-.input-field input[type=text].valid textarea.materialize-textarea{
-    border-bottom: 1px solid #000 !important;
-    box-shadow: 0 1px 0 0 #000;
-}
 #ingredientList{
     padding: 10px;
     border-radius: 10px;
-    color: #F19820;
     box-shadow: 0px 0px 100px 10px #798789;
 }
-#userResults{
-}
-textarea.materialize-textarea {
-    border-bottom: 1px solid orange !important;
-  }
-[type="checkbox"].filled-in:checked + span:not(.lever):after{
-    border: 2px solid #F19820 !important;
-    background-color: #F19820 !important;
-}    
-=======
-#ingredientList{
-    border-radius: 10px;
-}
-#userResults{
-}  
-#ingredientList{
-    border-radius: 10px;
+#ingredientList .material-icons{
+    color: #F19820;
 }
