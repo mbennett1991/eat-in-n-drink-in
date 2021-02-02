@@ -25,9 +25,10 @@
         <li>
             <div class="collapsible-header">
                 <i class="material-icons">favorite</i>
-                <span id="header1">Saved Favorites</span>
+                <span id="saved-favorites">Saved Favorites</span>
             </div>
             <div class="collapsible-body">
+                <span id="saved-recipes"></span>
             </div>
         </li>
         <br>
@@ -41,42 +42,54 @@
             <br>
         </li>
         <li>
-            <ul id="drinks-list">
+            <ul class="center" id="drinks-list">
             </ul>
         </li>
         <br>
         <br>
     </ul>
-    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu orange</i></a>
-  
-  <div class = "container" id="strtPg">  
-    <div class="carousel">
-        <a class="carousel-item" href="logo"><img src="https://i.gyazo.com/0976ae9777923afd1ad1e58173f3a434.png"></a>
-        <a class="carousel-item"
-            href="http://www.edamam.com/recipe/the-best-vegan-breakfast-sandwich-9559557a0cc426dfd7d7aca79a0bce98/vegan"><img
-                src="https://www.edamam.com/web-img/a73/a73159b4affa3460299feea42c4430be.jpg"></a>
-        <a class="carousel-item"
-            href="https://www.edamam.com/recipe/kimchi-pasta-b3ce18c4a415f62086a858c54f2c3f19/pasta"><img
-                src="https://www.edamam.com/web-img/2d1/2d1770d49a37ccc618c0780c2abcf2b9.jpg"></a>
-        <a class="carousel-item"
-            href="http://www.edamam.com/recipe/african-ground-nut-stew-with-sour-cream-chive-topping-1e92418f617c806ffe8e70e2d571da1e/tree+nut+free"><img
-                src="https://www.edamam.com/web-img/480/48035cdb9995944cd654d5e118f1e399.jpg"></a>
-        <a class="carousel-item"
-            href="http://www.edamam.com/recipe/chicken-liver-p%C3%A2t%C3%A9-9ca0499f2ac7f1e4cae63bdf4671c1b3/chicken"><img
-                src="https://www.edamam.com/web-img/480/480000e79dbdd4648c4acd65630ff654.jpg"></a>
-      </div>
-    <hr>
-    <br>
-      <div class="center">
-        <div class="col s4">
-            <a class="btn-large orange accent-4" id="strtBtn">Get Started</a>
-            <span class="flow-text"></span>
-       </div>
-      </div>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+    <div class="container" id="strtPg">
+        <div class="carousel">
+            <a class="carousel-item" href="#logo"><img
+                    src="https://i.gyazo.com/0976ae9777923afd1ad1e58173f3a434.png"></a>
+            <a class="carousel-item"
+                href="http://www.edamam.com/recipe/the-best-vegan-breakfast-sandwich-9559557a0cc426dfd7d7aca79a0bce98/vegan"><img
+                    src="https://www.edamam.com/web-img/a73/a73159b4affa3460299feea42c4430be.jpg"></a>
+            <a class="carousel-item"
+                href="https://www.edamam.com/recipe/kimchi-pasta-b3ce18c4a415f62086a858c54f2c3f19/pasta"><img
+                    src="https://www.edamam.com/web-img/2d1/2d1770d49a37ccc618c0780c2abcf2b9.jpg"></a>
+            <a class="carousel-item"
+                href="http://www.edamam.com/recipe/african-ground-nut-stew-with-sour-cream-chive-topping-1e92418f617c806ffe8e70e2d571da1e/tree+nut+free"><img
+                    src="https://www.edamam.com/web-img/480/48035cdb9995944cd654d5e118f1e399.jpg"></a>
+            <a class="carousel-item"
+                href="http://www.edamam.com/recipe/chicken-liver-p%C3%A2t%C3%A9-9ca0499f2ac7f1e4cae63bdf4671c1b3/chicken"><img
+                    src="https://www.edamam.com/web-img/480/480000e79dbdd4648c4acd65630ff654.jpg"></a>
+        </div>
+
+        <hr>
+        <br>
+        <div class="center">
+            <p>
+                Welcome!
+            </p>
+            <p>
+                This app allows you to find recipes based on your personal prefrefences and dietary restrictions. You
+                can even pair those recipes with a beer that compliments your meal choice! Press the button below to try
+                it out for yourself!
+            </p>
+            <br>
+            <div class="col s4">
+                <a class="btn-large orange accent-4" id="strtBtn">Get Started</a>
+                <span class="flow-text"></span>
+            </div>
+            <br>
+        </div>
     </div>
 
-    <div class="valign-wrapper hide">
-        <div class="container" id="userForm">
+    <div class="valign-wrapper hide" id="userForm">
+        <div class="container z-depth-3" id="form-style">
             <div class="row">
                 <form action="#">
                     <input type="text" id="main" placeholder="Main Ingredient">
@@ -99,171 +112,173 @@
                     <br>
                     <br>
                     <input type="text" id="exclude" placeholder="Exclude">
-
                     <a href="#" class="btn large right orange accent-4" id="srchBtn"><i
                             class="icon material-icons">search</i></a>
                 </form>
             </div>
         </div>
     </div>
-    <div class="container grey lighten-5 hide" id="ingredientList">
-        <div class="row">
-            <div class="modal modal-fixed-footer" id="ageConfirm">
-                <div class="modal-content">
-                    <h3 class="content-center">Please confirm if you are over the age of 18.</h3>
-                </div>
-                <div class="modal-footer">
-                    <a href="#" class="modal-close btn red darken-4" id="under18">Cancel</a>
-                    <a href="#" onlick="MyFunction();return false" class="modal-close btn green darken-3"
-                        id="over18">Confirm</a>
-                </div>
+    <div class="container hide z-depth-3" id="ingredientList">
+
+        <div class="modal modal-fixed-footer" id="ageConfirm">
+            <div class="modal-content">
+                <h3 class="content-center">Please confirm if you are over the age of 18.</h3>
             </div>
-            <div class="recipeContainer">
-                <ul class="collapsible">
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="material-icons">restaurant</i>
-                            <span id="header0"></span>
-                            <i class="material-icons favourite">favorite_border</i>
-                        </div>
-                        <div class="collapsible-body">
-                            <img id="image0">
-                            <br>
-                            <span id="recipe0"></span>
-                            <br>
-                            <a id="link0">Click here for the method!</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="material-icons">restaurant</i>
-                            <span id="header1"></span>
-                            <i class="material-icons favourite">favorite_border</i>
-                        </div>
-                        <div class="collapsible-body">
-                            <img id="image1">
-                            <br>
-                            <span id="recipe1"></span>
-                            <br>
-                            <a id="link1">Click here for the method!</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="material-icons">restaurant</i>
-                            <span id="header2"></span>
-                            <i class="material-icons favourite">favorite_border</i>
-                        </div>
-                        <div class="collapsible-body">
-                            <img id="image2">
-                            <br>
-                            <span id="recipe2"></span>
-                            <br>
-                            <a id="link2">Click here for the method!</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="material-icons">restaurant</i>
-                            <span id="header3"></span>
-                            <i class="material-icons favourite">favorite_border</i>
-                        </div>
-                        <div class="collapsible-body">
-                            <img id="image3">
-                            <br>
-                            <span id="recipe3">
-                            </span>
-                            <br>
-                            <a id="link3">Click here for the method!</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="material-icons">restaurant</i>
-                            <span id="header4"></span>
-                            <i class="material-icons favourite">favorite_border</i>
-                        </div>
-                        <div class="collapsible-body">
-                            <img id="image4">
-                            <br>
-                            <span id="recipe4"></span>
-                            <br>
-                            <a id="link4">Click here for the method!</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="material-icons">restaurant</i>
-                            <span id="header5"></span>
-                            <i class="material-icons favourite">favorite_border</i>
-                        </div>
-                        <div class="collapsible-body">
-                            <img id="image5">
-                            <br>
-                            <span id="recipe5"></span>
-                            <br>
-                            <a id="link5">Click here for the method!</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="material-icons">restaurant</i>
-                            <span id="header6"></span>
-                            <i class="material-icons favourite">favorite_border</i>
-                        </div>
-                        <div class="collapsible-body">
-                            <img id="image6">
-                            <br>
-                            <span id="recipe6"></span>
-                            <br>
-                            <a id="link6">Click here for the method!</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="material-icons">restaurant</i>
-                            <span id="header7"></span>
-                            <i class="material-icons favourite">favorite_border</i>
-                        </div>
-                        <div class="collapsible-body">
-                            <img id="image7">
-                            <br>
-                            <span id="recipe7"></span>
-                            <br>
-                            <a id="link7">Click here for the method!</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="material-icons">restaurant</i>
-                            <span id="header8"></span>
-                            <i class="material-icons favourite">favorite_border</i>
-                        </div>
-                        <div class="collapsible-body">
-                            <img id="image8">
-                            <br>
-                            <span id="recipe8"></span>
-                            <br>
-                            <a id="link8">Click here for the method!</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="material-icons">restaurant</i>
-                            <span id="header9"></span>
-                            <i class="material-icons favourite">favorite_border</i>
-                        </div>
-                        <div class="collapsible-body">
-                            <img id="image9">
-                            <br>
-                            <span id="recipe9"></span>
-                            <br>
-                            <a id="link9">Click here for the method!</a>
-                        </div>
-                    </li>
-                </ul>
+            <div class="modal-footer">
+                <a href="#" class="modal-close btn red darken-4" id="under18">Cancel</a>
+                <a href="#" class="modal-close btn green darken-3" id="over18">Confirm</a>
             </div>
         </div>
+
+        <p class="center">
+            Open the side navigation to pair with a drink!
+        </p>
+        <div class="recipeContainer">
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">restaurant</i>
+                        <span id="header0"></span>
+                        <i class="material-icons favourite">favorite_border</i>
+                    </div>
+                    <div class="collapsible-body">
+                        <img id="image0">
+                        <br>
+                        <span id="recipe0"></span>
+                        <br>
+                        <a id="link0">Click here for the method!</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">restaurant</i>
+                        <span id="header1"></span>
+                        <i class="material-icons favourite">favorite_border</i>
+                    </div>
+                    <div class="collapsible-body">
+                        <img id="image1">
+                        <br>
+                        <span id="recipe1"></span>
+                        <br>
+                        <a id="link1">Click here for the method!</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">restaurant</i>
+                        <span id="header2"></span>
+                        <i class="material-icons favourite">favorite_border</i>
+                    </div>
+                    <div class="collapsible-body">
+                        <img id="image2">
+                        <br>
+                        <span id="recipe2"></span>
+                        <br>
+                        <a id="link2">Click here for the method!</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">restaurant</i>
+                        <span id="header3"></span>
+                        <i class="material-icons favourite">favorite_border</i>
+                    </div>
+                    <div class="collapsible-body">
+                        <img id="image3">
+                        <br>
+                        <span id="recipe3">
+                        </span>
+                        <br>
+                        <a id="link3">Click here for the method!</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">restaurant</i>
+                        <span id="header4"></span>
+                        <i class="material-icons favourite">favorite_border</i>
+                    </div>
+                    <div class="collapsible-body">
+                        <img id="image4">
+                        <br>
+                        <span id="recipe4"></span>
+                        <br>
+                        <a id="link4">Click here for the method!</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">restaurant</i>
+                        <span id="header5"></span>
+                        <i class="material-icons favourite">favorite_border</i>
+                    </div>
+                    <div class="collapsible-body">
+                        <img id="image5">
+                        <br>
+                        <span id="recipe5"></span>
+                        <br>
+                        <a id="link5">Click here for the method!</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">restaurant</i>
+                        <span id="header6"></span>
+                        <i class="material-icons favourite">favorite_border</i>
+                    </div>
+                    <div class="collapsible-body">
+                        <img id="image6">
+                        <br>
+                        <span id="recipe6"></span>
+                        <br>
+                        <a id="link6">Click here for the method!</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">restaurant</i>
+                        <span id="header7"></span>
+                        <i class="material-icons favourite">favorite_border</i>
+                    </div>
+                    <div class="collapsible-body">
+                        <img id="image7">
+                        <br>
+                        <span id="recipe7"></span>
+                        <br>
+                        <a id="link7">Click here for the method!</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">restaurant</i>
+                        <span id="header8"></span>
+                        <i class="material-icons favourite">favorite_border</i>
+                    </div>
+                    <div class="collapsible-body">
+                        <img id="image8">
+                        <br>
+                        <span id="recipe8"></span>
+                        <br>
+                        <a id="link8">Click here for the method!</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">restaurant</i>
+                        <span id="header9"></span>
+                        <i class="material-icons favourite">favorite_border</i>
+                    </div>
+                    <div class="collapsible-body">
+                        <img id="image9">
+                        <br>
+                        <span id="recipe9"></span>
+                        <br>
+                        <a id="link9">Click here for the method!</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
     </div>
     </div>
     </div>
