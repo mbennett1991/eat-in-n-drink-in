@@ -2,7 +2,7 @@
 var search = "";
 var excluded = "";
 var healthVegan = "";
-var healthVeggie = ""
+var healthVeggie = "";
 var nutFree = "";
 var searchInput = $("#main");
 var checkVegan = $("#vegan");
@@ -18,7 +18,7 @@ $("#strtBtn").on("click", function (event) {
 })
 //START BUTTON TO NEXT PAGE
 function startPg() {
-    $("#strtPage").addClass("hide");
+    $("#strtPg").addClass("hide");
     $("#userForm").removeClass("hide");
     // return false;
 };
@@ -26,7 +26,6 @@ function startPg() {
 // ONCLICK for search
 $("#srchBtn").on("click", function (event) {
     event.preventDefault();
-    $("#strtPage").addClass("hide");
     $("#userForm").addClass("hide");
     $("#ingredientList").removeClass("hide");
     $("#drinkBtn").removeClass("hide");
@@ -83,6 +82,13 @@ function callAPI() {
 }
 // localStorage.setItem("favArr", JSON.stringify(favArr));
 
+
+//checking age is over 18
+
+$("#over18").click(function () {
+    findDrinks(search);
+});
+
 //ajax call for drinks pairing
 function findDrinks(search)
 {   
@@ -99,15 +105,6 @@ function findDrinks(search)
         console.log(beers);
         processBeerList(beers);
     });
-}
-
-
-//checking age is over 18
-function drinkWithThat(beers){
-    $("#over18").click(function(){
-        findDrinks(search);
-    
-    })
 }
 
 //display drinks pairing

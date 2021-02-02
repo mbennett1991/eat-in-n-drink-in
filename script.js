@@ -7,7 +7,4 @@ $(document).ready(function () {
     $(".collapsible").collapsible();
     //PLUG IN FOR MODAL 
         $('.modal').modal();
-    //$("#over18").click(function () {
-     //   drinkWithThat();
     });
- 
