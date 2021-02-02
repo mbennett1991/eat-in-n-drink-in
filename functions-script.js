@@ -2,7 +2,7 @@
 var search = "";
 var excluded = "";
 var healthVegan = "";
-var healthVeggie = ""
+var healthVeggie = "";
 var nutFree = "";
 var searchInput = $("#main");
 var checkVegan = $("#vegan");
@@ -18,7 +18,7 @@ $("#strtBtn").on("click", function (event) {
 })
 //START BUTTON TO NEXT PAGE
 function startPg() {
-    $("#strtPage").addClass("hide");
+    $("#strtPg").addClass("hide");
     $("#userForm").removeClass("hide");
     // return false;
 };
