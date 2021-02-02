@@ -8,6 +8,9 @@ img.container{
    top: 2px;
    z-index:1;
 }
+.collapsible-header .material-icons{
+    color: #F19820;
+}
 .valign-wrapper{
     width: 100%;
     height: 100%;
@@ -18,17 +21,15 @@ img.container{
     padding: 10px;
     border-radius: 10px;
     color: #F19820;
-    box-shadow: 0px 0px 100px 10px #798789;
 }
 [type="checkbox"].filled-in:checked + span:not(.lever):after{
     border: 2px solid #F19820 !important;
     background-color: #F19820 !important;
+}
+input[type="text"]:focus{
+    border-bottom: 3px solid #F19820 !important;
 }    
 #ingredientList{
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0px 0px 100px 10px #798789;
-}
-#ingredientList .material-icons{
-    color: #F19820;
 }
