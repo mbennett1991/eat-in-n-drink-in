@@ -26,7 +26,6 @@ function startPg() {
 // ONCLICK for search
 $("#srchBtn").on("click", function (event) {
     event.preventDefault();
-    $("#strtPage").addClass("hide");
     $("#userForm").addClass("hide");
     $("#ingredientList").removeClass("hide");
     $("#drinkBtn").removeClass("hide");
@@ -83,6 +82,13 @@ function callAPI() {
 }
 // localStorage.setItem("favArr", JSON.stringify(favArr));
 
+
+//checking age is over 18
+
+$("#over18").click(function () {
+    findDrinks(search);
+});
+
 //ajax call for drinks pairing
 function findDrinks(search)
 {   
@@ -99,15 +105,6 @@ function findDrinks(search)
         console.log(beers);
         processBeerList(beers);
     });
-}
-
-
-//checking age is over 18
-function drinkWithThat(beers){
-    $("#over18").click(function(){
-        findDrinks(search);
-    
-    })
 }
 
 //display drinks pairing
