@@ -32,6 +32,13 @@ $("#srchBtn").on("click", function (event) {
     callAPI();
 });
 
+//ONCLICK for search again
+$("#search-again").on("click", function(){
+    $("#ingredientList").addClass("hide");
+    $("#userForm").removeClass("hide");
+    $(searchInput).val('');
+});
+
 function callAPI() {
     // getting values from the search input
     search = searchInput.val().trim();
