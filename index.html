@@ -23,13 +23,20 @@
         <br>
         <br>
         <li>
-            <div class="collapsible-header">
-                <i class="material-icons">favorite</i>
-                <span id="saved-favorites">Saved Favorites</span>
-            </div>
-            <div class="collapsible-body">
-                <span id="saved-recipes"></span>
-            </div>
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="material-icons">favorite</i>
+                        <span id="saved-favorites">Saved Favorites</span>
+                    </div>
+                    <div class="collapsible-body">
+                        <span>
+                            <ul id="saved-recipes">
+                            </ul>
+                        </span>
+                    </div>
+                </li>
+            </ul>
         </li>
         <br>
         <br>
@@ -116,6 +123,14 @@
                             class="icon material-icons">search</i></a>
                 </form>
             </div>
+            <div class="modal modal-fixed-footer" id="valid-search">
+                <div class="modal-content">
+                    <h3 class="content-center">No results found. Please try again.</h3>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="modal-close btn" id="invalid-search">Ok</a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container hide z-depth-3" id="ingredientList">
@@ -141,7 +156,7 @@
                         <span id="header0"></span>
                         <i class="material-icons favourite">favorite_border</i>
                     </div>
-                    <div class="collapsible-body">
+                    <div class="collapsible-body list-body">
                         <img id="image0">
                         <br>
                         <span id="recipe0"></span>
@@ -155,7 +170,7 @@
                         <span id="header1"></span>
                         <i class="material-icons favourite">favorite_border</i>
                     </div>
-                    <div class="collapsible-body">
+                    <div class="collapsible-body list-body">
                         <img id="image1">
                         <br>
                         <span id="recipe1"></span>
@@ -169,7 +184,7 @@
                         <span id="header2"></span>
                         <i class="material-icons favourite">favorite_border</i>
                     </div>
-                    <div class="collapsible-body">
+                    <div class="collapsible-body list-body">
                         <img id="image2">
                         <br>
                         <span id="recipe2"></span>
@@ -183,7 +198,7 @@
                         <span id="header3"></span>
                         <i class="material-icons favourite">favorite_border</i>
                     </div>
-                    <div class="collapsible-body">
+                    <div class="collapsible-body list-body">
                         <img id="image3">
                         <br>
                         <span id="recipe3">
@@ -198,7 +213,7 @@
                         <span id="header4"></span>
                         <i class="material-icons favourite">favorite_border</i>
                     </div>
-                    <div class="collapsible-body">
+                    <div class="collapsible-body list-body">
                         <img id="image4">
                         <br>
                         <span id="recipe4"></span>
@@ -212,7 +227,7 @@
                         <span id="header5"></span>
                         <i class="material-icons favourite">favorite_border</i>
                     </div>
-                    <div class="collapsible-body">
+                    <div class="collapsible-body list-body">
                         <img id="image5">
                         <br>
                         <span id="recipe5"></span>
@@ -226,7 +241,7 @@
                         <span id="header6"></span>
                         <i class="material-icons favourite">favorite_border</i>
                     </div>
-                    <div class="collapsible-body">
+                    <div class="collapsible-body list-body">
                         <img id="image6">
                         <br>
                         <span id="recipe6"></span>
@@ -240,7 +255,7 @@
                         <span id="header7"></span>
                         <i class="material-icons favourite">favorite_border</i>
                     </div>
-                    <div class="collapsible-body">
+                    <div class="collapsible-body list-body">
                         <img id="image7">
                         <br>
                         <span id="recipe7"></span>
@@ -254,7 +269,7 @@
                         <span id="header8"></span>
                         <i class="material-icons favourite">favorite_border</i>
                     </div>
-                    <div class="collapsible-body">
+                    <div class="collapsible-body list-body">
                         <img id="image8">
                         <br>
                         <span id="recipe8"></span>
@@ -268,7 +283,7 @@
                         <span id="header9"></span>
                         <i class="material-icons favourite">favorite_border</i>
                     </div>
-                    <div class="collapsible-body">
+                    <div class="collapsible-body list-body">
                         <img id="image9">
                         <br>
                         <span id="recipe9"></span>

@@ -33,3 +33,14 @@ input[type="text"]:focus{
     padding: 10px;
     border-radius: 10px;
 }
+#saved-favorites{
+    color: #F19820;
+    text-shadow: 1px 1px rgb(65, 65, 65);
+}
+#slide-out{
+   background-color:#798789;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}

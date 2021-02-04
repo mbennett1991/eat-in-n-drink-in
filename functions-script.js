@@ -9,7 +9,21 @@ var checkVegan = $("#vegan");
 var checkVeggie = $("#vegetarian")
 var checkNut = $("#nutFree");
 var checkExcl = $("#exclude");
-// var favArr = [];
+var favArr = JSON.parse(localStorage.getItem("favArr")) || [];
+
+renderFavList();
+
+function renderFavList() {
+    for (const favourite of favArr) {
+        console.log(favArr.length);
+        var favAnc = $("<a>").text(favourite.recipeName).attr("href", favourite.url);
+        var favItem = $("<li>").append(favAnc)
+        $("#saved-recipes").prepend(favItem);
+        // renderFavourites function should pass the 
+        // to call each time favourite is made/page refreshed
+        // getItem in global for the array 
+    }
+}
 
 // ONCLICK for start page
 $("#strtBtn").on("click", function (event) {
@@ -39,7 +53,7 @@ function callAPI() {
     // conditional statements to check for 'checked' boxes
     if (checkVegan.is(":checked")) {
         healthVegan = "&health=vegan"
-    } 
+    }
     if (checkVeggie.is(":checked")) {
         healthVeggie = "&health=vegetarian"
     }
@@ -55,32 +69,65 @@ function callAPI() {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        console.log(response);
-        console.log(queryURL);
-        // local variables
-        var listNum = 0;
-        var headers = response.hits;
-        // for loop to create content into the html containers
-        for (var i = 0; i < headers.length; i++) {
-            $("#header" + listNum).text(headers[i].recipe.label);
-            $("#recipe" + listNum).text(headers[i].recipe.ingredientLines);
-            $("#image" + listNum).attr("src", headers[i].recipe.image);
-            $("#link" + listNum).attr("href", headers[i].recipe.url);
-            listNum++;
-            // console.log(headers[i].recipe.label)
+        if (response.hits.length == 0) {
+            console.log("search fail");
+            $("#valid-search").removeClass("hide");
+        }
+        else {
+            console.log(response);
+            console.log(queryURL);
+            // local variables
+            var listNum = 0;
+            var headers = response.hits;
+
+            // for loop to create content into the html containers
+            for (var i = 0; i < headers.length; i++) {
+                $("#header" + listNum).text(headers[i].recipe.label);
+                $("#recipe" + listNum).text(headers[i].recipe.ingredientLines);
+                $("#image" + listNum).attr("src", headers[i].recipe.image);
+                $("#link" + listNum).attr("href", headers[i].recipe.url);
+                listNum++;
+                // console.log(headers[i].recipe.label)
+            }
+            // var storeHeader = headers[i].recipe.label;
         }
         // onclick to change the 'favorite' icon
-        $(".favourite").on("click", function (event) {
-            event.preventDefault();
+        $(".favourite").on("click", function () {
+            // find the recipe name and url
+            var storeHeader = $(this).parent().find("span").text();
+            var storeURL = $(".list-body").parent().find("a").attr("href");
+            console.log(storeURL);
+            // populates object with favourited name and url
+            var emptyObj = {
+                recipeName: "",
+                url: ""
+            }
+            emptyObj.recipeName = storeHeader;
+            emptyObj.url = storeURL;
+
+            favArr.push(emptyObj);
+            // if (favArr.length > 9) {
+            //     favArr.shift()
+            // }
+
+            renderFavList();
+            console.log(storeHeader);
+
+            // turns the border heart icon into a filled one
             $(this).text("favorite");
-            // favArr.push(storeHeader)
-            // console.log(favArr)
+
+            console.log(favArr);
+
+            localStorage.setItem("favArr", JSON.stringify(favArr));
+
+
 
         })
+
     });
 
 }
-// localStorage.setItem("favArr", JSON.stringify(favArr));
+
 
 
 //checking age is over 18
@@ -90,8 +137,7 @@ $("#over18").click(function () {
 });
 
 //ajax call for drinks pairing
-function findDrinks(search)
-{   
+function findDrinks(search) {
     search = searchInput.val().trim();
     var baseURL = "https://api.punkapi.com/v2/beers";
 
@@ -100,7 +146,7 @@ function findDrinks(search)
     $.ajax({
         url: drinksURL,
         method: "GET"
-    }).then(function(response) {
+    }).then(function (response) {
         var beers = response;
         console.log(beers);
         processBeerList(beers);
@@ -108,15 +154,15 @@ function findDrinks(search)
 }
 
 //display drinks pairing
-function processBeerList(beers){
+function processBeerList(beers) {
     var beerList = $("#drinks-list");
     beerList.empty();
 
-    $.each(beers, function(index, beer) {
+    $.each(beers, function (index, beer) {
 
-        if (index <= 4){
+        if (index <= 4) {
 
-        beerList.append('<li>' + beer.name + "<br>" + '<img class="beer-image" src="' + beer.image_url + '"/></li>');
+            beerList.append('<li>' + beer.name + "<br>" + '<img class="beer-image" src="' + beer.image_url + '"/></li>');
             $(".beer-image").height("10%")
             $(".beer-image").width("10%")
             console.log(beer.name);
@@ -125,6 +171,6 @@ function processBeerList(beers){
 
         }
 
-            
+
     });
 }
