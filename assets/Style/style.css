@@ -39,3 +39,14 @@ input[type="text"]:focus{
 #slide-out{
    background-color:#798789;
 }
+#saved-favorites{
+    color: #F19820;
+    text-shadow: 1px 1px rgb(65, 65, 65);
+}
+#slide-out{
+   background-color:#798789;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
