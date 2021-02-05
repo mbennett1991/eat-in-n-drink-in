@@ -68,8 +68,14 @@ $("#exclude").keyup(function (event) {
 $("#search-again").on("click", function(){
     $("#ingredientList").addClass("hide");
     $("#userForm").removeClass("hide");
-    $(searchInput).val('');
+    $("#user-form").trigger("reset");
 });
+
+//ONCLICK for clearing favorites 
+$("#clear-favorites").on("click", function(){
+    localStorage.clear();
+    $("#saved-recipes").empty();
+})
 
 function callAPI() {
     // getting values from the search input
@@ -151,6 +157,8 @@ function callAPI() {
 //checking age is over 18
 
 $("#over18").click(function () {
+    $(".recipeContainer").removeClass("col m12 s12");
+    $(".recipeContainer").addClass("col m9 s12");
     findDrinks(search);
 });
 
