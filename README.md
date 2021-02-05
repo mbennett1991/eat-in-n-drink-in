@@ -16,7 +16,7 @@ Given more time we would allow the user to create an account and save their sear
 ---
 <a name = "Installation"></a>
 ### Installation 
-<a href = "https://lukedesmond.github.io/eat-in-n-drink-in/">Click me</a> to try out our app!
+<a href = "https://lukedesmond.github.io/eat-in-n-drink-in">Click me</a> to try out our app!
 
 ---
 <a name = "Usage"></a>
