@@ -14,15 +14,20 @@ var favArr = JSON.parse(localStorage.getItem("favArr")) || [];
 renderFavList();
 
 function renderFavList() {
+    // empty the list before populating to avoid 
+    $("#saved-recipes").empty();
+    // 'for of' loop to create favourites list
     for (const favourite of favArr) {
         console.log(favArr.length);
         var favAnc = $("<a>").text(favourite.recipeName).attr("href", favourite.url);
         var favItem = $("<li>").append(favAnc)
         $("#saved-recipes").prepend(favItem);
-        // renderFavourites function should pass the 
-        // to call each time favourite is made/page refreshed
-        // getItem in global for the array 
-    }
+        // conditional statement to limit the array length to 9
+        if (favArr.length > 9) {
+            favArr.shift();
+        };
+    };
+
 }
 
 // ONCLICK for start page
@@ -70,16 +75,15 @@ function callAPI() {
         method: "GET"
     }).then(function (response) {
         if (response.hits.length == 0) {
-            console.log("search fail");
+            // console.log("search fail");
             $("#valid-search").removeClass("hide");
         }
         else {
-            console.log(response);
-            console.log(queryURL);
+            // console.log(response);
+            // console.log(queryURL);
             // local variables
             var listNum = 0;
             var headers = response.hits;
-
             // for loop to create content into the html containers
             for (var i = 0; i < headers.length; i++) {
                 $("#header" + listNum).text(headers[i].recipe.label);
@@ -89,13 +93,12 @@ function callAPI() {
                 listNum++;
                 // console.log(headers[i].recipe.label)
             }
-            // var storeHeader = headers[i].recipe.label;
         }
         // onclick to change the 'favorite' icon
         $(".favourite").on("click", function () {
             // find the recipe name and url
             var storeHeader = $(this).parent().find("span").text();
-            var storeURL = $(".list-body").parent().find("a").attr("href");
+            var storeURL = $(this).parent().siblings().find("a").attr("href");
             console.log(storeURL);
             // populates object with favourited name and url
             var emptyObj = {
@@ -104,24 +107,16 @@ function callAPI() {
             }
             emptyObj.recipeName = storeHeader;
             emptyObj.url = storeURL;
-
+            // pushes to favArr
             favArr.push(emptyObj);
-            // if (favArr.length > 9) {
-            //     favArr.shift()
-            // }
-
+            // call function to create favourite list
             renderFavList();
-            console.log(storeHeader);
-
+            // console.log(storeHeader);
             // turns the border heart icon into a filled one
             $(this).text("favorite");
-
-            console.log(favArr);
-
+            // console.log(favArr);
+            // saves favArr to local storage
             localStorage.setItem("favArr", JSON.stringify(favArr));
-
-
-
         })
 
     });
