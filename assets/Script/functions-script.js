@@ -40,10 +40,23 @@ function startPg() {
 // ONCLICK for search
 $("#srchBtn").on("click", function (event) {
     event.preventDefault();
-    $("#userForm").addClass("hide");
-    $("#ingredientList").removeClass("hide");
-    $("#drinkBtn").removeClass("hide");
     callAPI();
+});
+
+//initiating search from enter key on Main ingredient id
+$("#main").keyup(function (event) {
+    event.preventDefault();
+    if (event.keyCode == 13) {
+        callAPI();
+    }
+});
+
+//initiating search from enter key on exclude ingredient id
+$("#exclude").keyup(function (event) {
+    event.preventDefault();
+    if (event.keyCode == 13) {
+        callAPI();
+    }
 });
 
 //ONCLICK for search again
@@ -78,9 +91,14 @@ function callAPI() {
     }).then(function (response) {
         if (response.hits.length == 0) {
             console.log("search fail");
-            $("#valid-search").removeClass("hide");
+            $("#error-modal-button")[0].click();
         }
         else {
+
+            $("#userForm").addClass("hide");
+            $("#ingredientList").removeClass("hide");
+            $("#drinkBtn").removeClass("hide");
+        
             console.log(response);
             console.log(queryURL);
             // local variables
@@ -126,13 +144,8 @@ function callAPI() {
             console.log(favArr);
 
             localStorage.setItem("favArr", JSON.stringify(favArr));
-
-
-
         })
-
     });
-
 }
 
 
