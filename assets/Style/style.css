@@ -31,7 +31,13 @@ input[type="text"]:focus{
 }    
 #ingredientList{
     padding: 10px;
-    border-radius: 10px;
+}
+#saved-favorites, #drinks-list{
+    color: #F19820;
+    text-shadow: 1px 1px rgb(65, 65, 65);
+}
+#slide-out{
+   background-color:#798789;
 }
 #saved-favorites{
     color: #F19820;

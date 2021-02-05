@@ -45,10 +45,30 @@ function startPg() {
 // ONCLICK for search
 $("#srchBtn").on("click", function (event) {
     event.preventDefault();
-    $("#userForm").addClass("hide");
-    $("#ingredientList").removeClass("hide");
-    $("#drinkBtn").removeClass("hide");
     callAPI();
+});
+
+//initiating search from enter key on Main ingredient id
+$("#main").keyup(function (event) {
+    event.preventDefault();
+    if (event.keyCode == 13) {
+        callAPI();
+    }
+});
+
+//initiating search from enter key on exclude ingredient id
+$("#exclude").keyup(function (event) {
+    event.preventDefault();
+    if (event.keyCode == 13) {
+        callAPI();
+    }
+});
+
+//ONCLICK for search again
+$("#search-again").on("click", function(){
+    $("#ingredientList").addClass("hide");
+    $("#userForm").removeClass("hide");
+    $(searchInput).val('');
 });
 
 function callAPI() {
@@ -75,12 +95,17 @@ function callAPI() {
         method: "GET"
     }).then(function (response) {
         if (response.hits.length == 0) {
-            // console.log("search fail");
-            $("#valid-search").removeClass("hide");
+            console.log("search fail");
+            $("#error-modal-button")[0].click();
         }
         else {
-            // console.log(response);
-            // console.log(queryURL);
+
+            $("#userForm").addClass("hide");
+            $("#ingredientList").removeClass("hide");
+            $("#drinkBtn").removeClass("hide");
+        
+            console.log(response);
+            console.log(queryURL);
             // local variables
             var listNum = 0;
             var headers = response.hits;
@@ -118,9 +143,7 @@ function callAPI() {
             // saves favArr to local storage
             localStorage.setItem("favArr", JSON.stringify(favArr));
         })
-
     });
-
 }
 
 
@@ -144,20 +167,19 @@ function findDrinks(search) {
     }).then(function (response) {
         var beers = response;
         console.log(beers);
-        processBeerList(beers);
+        noBeers(beers);
     });
 }
 
 //display drinks pairing
-function processBeerList(beers) {
+function processBeerList(beerArray){
     var beerList = $("#drinks-list");
     beerList.empty();
 
-    $.each(beers, function (index, beer) {
+    $.each(beerArray, function(index, beer) {
 
-        if (index <= 4) {
-
-            beerList.append('<li>' + beer.name + "<br>" + '<img class="beer-image" src="' + beer.image_url + '"/></li>');
+        if (index <= 4){
+        beerList.append('<li>' + beer.name + "<br>" + '<img class="beer-image" src="' + beer.image_url + '"/></li>');
             $(".beer-image").height("10%")
             $(".beer-image").width("10%")
             console.log(beer.name);
@@ -165,7 +187,92 @@ function processBeerList(beers) {
         else {
 
         }
-
-
+           
     });
+}
+
+//logic for excluding non-vegan beers
+function checkForVeganBeer(beers){
+    var vegan = $("#vegan").is(":checked");
+    var vegetarian = $("#vegetarian").is(":checked");
+    var beerList = $("#drinks-list");
+    const veganArray = ["Hazy Jane", "Punk IPA", "Clockwork Tangerine"];
+    beerList.empty();
+                   
+    if (vegan || vegetarian) {
+        $.each(veganArray, function(index, beerName) {
+            beerList.append('<li>' + [beerName] + '</li>');
+            console.log(veganArray);
+        });
+    }
+    else {
+        excludeIngredients(beers);
+    }
+}
+
+//logic for excluding other ingredients
+function excludeIngredients(beers) {
+    var exclude = $("#exclude").val().trim();
+    var lowercaseExclude = exclude.toLowerCase();
+    var filteredBeers = [];
+
+    if (exclude.length == 0) {
+        excludeNuts(beers)
+    }
+    else {
+
+        $.each(beers, function(index, beer) {
+            var string = beer.description;
+            var foundIndex = string.toLowerCase().search(lowercaseExclude);
+        
+            if (foundIndex < 0)
+            {
+                filteredBeers.push(beer);
+            }
+        });
+            excludeNuts(filteredBeers);
+            console.log(filteredBeers);
+    }
+}
+
+//logic for excluding nuts
+function excludeNuts(beerArray) {
+    var nuts = $("#nutFree").is(":checked");
+    const nutArray = ["almond", "hazelnut", "peanut", "cashew", "macadamia", "pecan", "walnut", "pistachio", "chestnut", "coconut"];
+    var fullyFilteredBeers = [];
+
+    if (nuts) {
+        $.each(beerArray, function(index, beer) {
+            var string = beer.description;
+            var foundIndex = string.toLowerCase().search(nutArray);
+        
+            if (foundIndex < 0)
+            {
+                fullyFilteredBeers.push(beer);
+                
+            }
+        });
+        processBeerList(fullyFilteredBeers);
+        console.log(fullyFilteredBeers);
+    }
+    else {
+        processBeerList(beerArray);
+        console.log(beerArray);
+    }
+    
+    
+}
+
+//Returning a message if no beers matched
+function noBeers(beers) {
+    var beerList = $("#drinks-list");
+    beerList.empty();
+    if (beers.length == 0) {
+        console.log("no beer :(");
+        beerList.append('<li>' + "no beers match, make your search wider" + '</li>');
+    }
+    else {
+        checkForVeganBeer(beers);
+
+    }
 }
