@@ -1,5 +1,6 @@
 img.container{
     width: 100%;
+    opacity: 0.7;
 }
 .sidenav-trigger .material-icons{
    color:#F19820; 
@@ -38,6 +39,7 @@ input[type="text"]:focus{
 }
 #slide-out{
    background-color:#798789;
+   opacity: 0.7;
 }
 #saved-favorites{
     color: #F19820;
