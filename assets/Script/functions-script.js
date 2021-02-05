@@ -153,6 +153,8 @@ function callAPI() {
 //checking age is over 18
 
 $("#over18").click(function () {
+    $(".recipeContainer").removeClass("col m12 s12");
+    $(".recipeContainer").addClass("col m9 s12");
     findDrinks(search);
 });
 
