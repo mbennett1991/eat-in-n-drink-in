@@ -93,3 +93,8 @@ img{
   margin-left: auto;
   margin-right: auto;
 } 
+
+#drinks-list {
+    z-index:-1;
+    position:relative;
+}
