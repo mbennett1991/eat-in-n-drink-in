@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/Style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
@@ -87,7 +87,8 @@
             <div class="row">
                 <form action="#">
                     <input type="text" id="main" placeholder="Main Ingredient">
-                    <br>
+                    <br
+                    >
                     <br>
                     <label>
                         <input type="checkbox" class="filled-in" id="vegan" class="red">
@@ -106,10 +107,13 @@
                     <br>
                     <br>
                     <input type="text" id="exclude" placeholder="Exclude">
-                    <a href="#" class="btn large right orange accent-4" id="srchBtn"><i
+                    <a href="#" class="btn modal-trigger large right orange accent-4" id="srchBtn"><i
                             class="icon material-icons">search</i></a>
                 </form>
             </div>
+
+            <a href="#valid-search" class="btn modal-trigger hide" id="error-modal-button"></a>
+
             <div class="modal modal-fixed-footer" id="valid-search">
                 <div class="modal-content">
                     <h3 class="content-center">No results found. Please try again.</h3>
@@ -118,6 +122,7 @@
                     <a href="#" class="modal-close btn" id="invalid-search">Ok</a>
                 </div>
             </div>
+
         </div>
     </div>
     <div class="container hide z-depth-3" id="ingredientList">
