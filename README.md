@@ -16,16 +16,17 @@ Given more time we would allow the user to create an account and save their sear
 ---
 <a name = "Installation"></a>
 ### Installation 
-<a href = "">Click me</a> to try out our app!
+<a href = "https://lukedesmond.github.io/eat-in-n-drink-in">Click me</a> to try out our app!
 
 ---
 <a name = "Usage"></a>
 ### Usage  
 Here is our application in action!
 
-![](images/screenshot1.png)<br>
-
-![](images/screenshot2.png)
+![](assets/images/screenshot1.png)<br>
+![](assets/images/screenshot2.png)<br>
+![](assets/images/screenshot3.png)<br>
+![](assets/images/screenshot4.png)
 
 ---
 <a name = "Links"></a>
