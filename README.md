@@ -25,7 +25,8 @@ Here is our application in action!
 
 ![](assets/images/screenshot1.png)<br>
 ![](assets/images/screenshot2.png)<br>
-![](assets/images/screenshot3.png)
+![](assets/images/screenshot3.png)<br>
+![](assets/images/screenshot4.png)
 
 ---
 <a name = "Links"></a>
