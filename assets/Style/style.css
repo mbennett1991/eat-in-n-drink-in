@@ -32,7 +32,11 @@ input[type="text"]:focus{
 #ingredientList{
     padding: 10px;
 }
-#saved-favorites, #drinks-list{
+#drinks-list, li{
+    margin-bottom: 20px;
+    list-style: none;
+}
+#saved-favorites,{
     color: #F19820;
     text-shadow: 1px 1px rgb(65, 65, 65);
 }
