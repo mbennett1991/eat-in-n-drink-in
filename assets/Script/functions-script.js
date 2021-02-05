@@ -66,9 +66,7 @@ $("#exclude").keyup(function (event) {
 
 //ONCLICK for search again
 $("#search-again").on("click", function(){
-    $("#ingredientList").addClass("hide");
-    $("#userForm").removeClass("hide");
-    $("#user-form").trigger("reset");
+    location.reload();
 });
 
 //ONCLICK for clearing favorites 
