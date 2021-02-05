@@ -124,10 +124,13 @@
                     <br>
                     <br>
                     <input type="text" id="exclude" placeholder="Exclude">
-                    <a href="#" class="btn large right orange accent-4" id="srchBtn"><i
+                    <a href="#" class="btn modal-trigger large right orange accent-4" id="srchBtn"><i
                             class="icon material-icons">search</i></a>
                 </form>
             </div>
+
+            <a href="#valid-search" class="btn modal-trigger hide" id="error-modal-button"></a>
+
             <div class="modal modal-fixed-footer" id="valid-search">
                 <div class="modal-content">
                     <h3 class="content-center">No results found. Please try again.</h3>
@@ -136,6 +139,7 @@
                     <a href="#" class="modal-close btn" id="invalid-search">Ok</a>
                 </div>
             </div>
+
         </div>
     </div>
     <div class="container hide z-depth-3" id="ingredientList">
