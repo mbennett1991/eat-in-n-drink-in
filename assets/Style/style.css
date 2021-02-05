@@ -98,3 +98,8 @@ img{
     z-index:-1;
     position:relative;
 }
+
+h3 {
+    max-width: 100%;
+    text-align: center;
+}
